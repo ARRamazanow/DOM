@@ -8,9 +8,6 @@ console.log(titleDOM.innerText.length);
 titleDOM.textContent = 'Pomidoras';
 titleDOM.innerText = 'Agurkas';
 
-
-console.clear();
-
 const liDOM = document.querySelectorAll('ul li');
 
 for (let i = 0; i < liDOM.length; i++) {
