@@ -1,7 +1,6 @@
-import {header} from "../components/header.js";
+import { header } from '../components/header.js';
 
-header (); 
-
+header();
 
 console.log('home');
 

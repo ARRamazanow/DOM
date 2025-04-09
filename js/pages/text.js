@@ -1,7 +1,6 @@
-import {header} from "../components/header.js";
+import { header } from "../components/header.js";
 
-header (); 
-
+header();
 
 const titleDOM = document.getElementById('title');
 
@@ -12,6 +11,9 @@ console.log(titleDOM.innerText.length);
 
 titleDOM.textContent = 'Pomidoras';
 titleDOM.innerText = 'Agurkas';
+
+
+console.clear();
 
 const liDOM = document.querySelectorAll('ul li');
 
