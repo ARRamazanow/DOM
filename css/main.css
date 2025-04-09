@@ -42,3 +42,20 @@ body {
 .main-header .link.active {
   background-color: #ccc;
 }
+
+.clicker{
+display: flex;
+gap: 1rem;
+align-items: center;
+}
+
+.clicker .btn {
+ height: 4rem;
+  width: 4rem;
+  font-size: 3rem;
+}
+
+.clicker .count {
+  font-size: 2rem;
+  
+}
