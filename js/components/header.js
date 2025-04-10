@@ -1,6 +1,8 @@
 export function header() {
-    let base = 'http://localhost:5408/';
+    let base = 'http://localhost:5555/';
+    let projectName = '';
     if (location.hostname !== 'localhost') {
+        projectName = '/dom';
         base = 'https://arramazanow.github.io/DOM/';
     }
     document.head.insertAdjacentHTML('afterbegin', `<base href="${base}">`);
@@ -12,19 +14,18 @@ export function header() {
         { text: 'Darzas', href: '/darzas/' },
         { text: 'Header', href: '/header/' },
         { text: 'Click', href: '/click/' },
+        { text: 'Like', href: '/like/' },
     ];
 
-    const lp = location.pathname;
-    const currentPage = lp.length > 1 && lp.at(-1) === '/' ? lp.slice(0, -1) : lp;
     let linksHTML = '';
 
     for (const link of menu) {
         let activePage = '';
-        if (link.href === currentPage) {
+        if (projectName + link.href === location.pathname) {
             activePage = 'active';
         }
 
-        linksHTML += `<a class="link ${activePage}" href="${link.href}">${link.text}</a>`;
+        linksHTML += `<a class="link ${activePage}" href=".${link.href}">${link.text}</a>`;
     }
 
     const HTML = `
